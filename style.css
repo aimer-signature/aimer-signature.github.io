@@ -1,0 +1,40 @@
+html {
+	background-color: #ffffff;
+	font-family: sans-serif;
+	line-height: 1;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	width: auto;
+	max-width: 50em;
+	margin: auto;
+}
+
+ul li {
+	margin-bottom: 0.5em;
+	line-height: 1.3em;
+}
+
+table {
+	margin: auto;
+}
+
+table, th, td {
+	border: 1px solid #303030;
+	padding: 0.4em;
+	border-collapse: collapse;
+}
+
+th {
+	font-weight: bold;
+}
+
+td.center {
+	text-align: center;
+}
+
+p {
+	line-height: 1.3em;
+}
