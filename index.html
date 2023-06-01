@@ -13,12 +13,21 @@
 
 <body>
 
-<div style="text-align: center;"><img src="img/logo.png" alt="AIMer" width="50%"/></div>
-<hr color="black" noshade/>
+<div style="text-align: center;"><img src="img/banner.jpg" alt="AIMer" width="100%"/></div>
 
 <h2>About AIMer</h2>
 
-The AIMer signature scheme is ...
+<p>AIMer is a signature scheme which is obtained from a zero-knowledge proof of preimage knowledge for a certain one-way function. AIMer consists of two parts: a non-interactive zero-knowledge proof of knowledge(NIZKPoK) system, and a one-way function. The security of both parts solely depends on the security of the
+underlying symmetric primitives.</p>
+
+<p>The NIZKPoK system in AIMer can be viewed as a customized version of the BN++ proof system. BN++ is a NIZKPoK system based on the MPC-in-the-Head (MPCitH) paradigm, which efficiently proves large-field arithmetic. The difference between our system and BN++ is as follows.</p>
+
+<ul>
+  <li> Our system integrates Commit and ExpandTape to CommitAndExpand. It reduces significant amount of signing and verification time without loss of security in the random oracle model.
+  <li> Hash functions and extendable-output functions used in our system are domain-separated for stronger concrete security.
+</ul>
+
+<p>The one-way function of AIMer is AIM, which is a tweakable one-way function dedicated to the BN++ system. AIM has been designed to have strong security against algebraic attacks producing short signatures when combined with BN++. The AIM function fully exploits the optimization techniques of BN++ using repeated multipliers for checking multiplication triples and locally computed output shares to reduce the overall signature size.</p>
 
 <h2>Features</h2>
 <ul>
@@ -31,50 +40,98 @@ The AIMer signature scheme is ...
 
 <p> The source codes are developed in C++17, using the GNU C++ 8.4.0 compiler with the AVX2 instructions on the Ubuntu 18.04 operating system. All the implementations used in the experiments are compiled at the -O3 optimization level. For the instantiation of the XOF, we use SHAKE in XKCP library. We use SHAKE128 for AIMer-I, and SHAKE256 for AIMer-III and AIMer-V. Our experiments are measured in Intel Xeon E5-1650 v3 @ 3.50GHz with 128 GB memory. </p>
 
-<table>
+<table class="nth-table-number">
 <tr class="titlerow">
   <th>Scheme</th>
+  <th>Keygen (ms)</th>
   <th>Sign (ms)</th>
   <th>Verify (ms)</th>
   <th>Size (B)</th>
 </tr>
 <tr>
-  <td>AIMer-I (Fast)</td>
-  <td class="center">0.82</td>
-  <td class="center">0.78</td>
+  <td>AIMER_L1_PARAM1</td>
+  <td class="center">0.02</td>
+  <td class="center">0.59</td>
+  <td class="center">0.53</td>
   <td class="center">5904</td>
 </tr>
 <tr>
-  <td>AIMer-I (Short)</td>
-  <td class="center">5.92</td>
-  <td class="center">5.94</td>
-  <td class="center">4448</td>
+  <td>AIMER_L1_PARAM2</td>
+  <td class="center">0.02</td>
+  <td class="center">1.36</td>
+  <td class="center">1.28</td>
+  <td class="center">4880</td>
 </tr>
 <tr>
-  <td>AIMer-III (Fast)</td>
-  <td class="center">1.57</td>
-  <td class="center">1.48</td>
+  <td>AIMER_L1_PARAM3</td>
+  <td class="center">0.02</td>
+  <td class="center">4.42</td>
+  <td class="center">4.31</td>
+  <td class="center">4176</td>
+</tr>
+<tr>
+  <td>AIMER_L1_PARAM4</td>
+  <td class="center">0.02</td>
+  <td class="center">22.29</td>
+  <td class="center">21.09</td>
+  <td class="center">3840</td>
+</tr>
+<tr>
+  <td>AIMER_L3_PARAM1</td>
+  <td class="center">0.04</td>
+  <td class="center">1.38</td>
+  <td class="center">1.28</td>
   <td class="center">13080</td>
 </tr>
 <tr>
-  <td>AIMer-III (Short)</td>
-  <td class="center">10.57</td>
-  <td class="center">10.42</td>
+  <td>AIMER_L3_PARAM2</td>
+  <td class="center">0.04</td>
+  <td class="center">3.59</td>
+  <td class="center">3.44</td>
+  <td class="center">10440</td>
+</tr>
+<tr>
+  <td>AIMER_L3_PARAM3</td>
+  <td class="center">0.04</td>
+  <td class="center">9.77</td>
+  <td class="center">9.62</td>
   <td class="center">9144</td>
 </tr>
 <tr>
-  <td>AIMer-V (Fast)</td>
-  <td class="center">2.87</td>
-  <td class="center">2.78</td>
+  <td>AIMER_L3_PARAM4</td>
+  <td class="center">0.04</td>
+  <td class="center">53.38</td>
+  <td class="center">50.73</td>
+  <td class="center">8352</td>
+</tr>
+<tr>
+  <td>AIMER_L5_PARAM1</td>
+  <td class="center">0.08</td>
+  <td class="center">2.45</td>
+  <td class="center">2.34</td>
   <td class="center">25152</td>
 </tr>
 <tr>
-  <td>AIMer-V (Short)</td>
-  <td class="center">19.21</td>
-  <td class="center">19.19</td>
+  <td>AIMER_L5_PARAM2</td>
+  <td class="center">0.08</td>
+  <td class="center">6.26</td>
+  <td class="center">6.07</td>
+  <td class="center">19904</td>
+</tr>
+<tr>
+  <td>AIMER_L5_PARAM3</td>
+  <td class="center">0.08</td>
+  <td class="center">18.66</td>
+  <td class="center">17.75</td>
   <td class="center">17088</td>
 </tr>
-
+<tr>
+  <td>AIMER_L5_PARAM4</td>
+  <td class="center">0.08</td>
+  <td class="center">91.76</td>
+  <td class="center">88.83</td>
+  <td class="center">15392</td>
+</tr>
 
 </table>
 
@@ -88,16 +145,14 @@ The AIMer signature scheme is ...
 	Cryptology ePrint Archive. Report 2022/1387. 2022.
 </ul>
 
-
-
 <h2>Resources</h2>
 
 <ul>
-	<li> Implementation : <a href="https://github.com/aimer-signature">(repo)</a>
+	<li> NIST PQC Project Submisson : TBA
 
-	<li> KpqC submission : <a href="./docs/AIMer-document-KpqC.pdf">(pdf)</a>
+	<li> KpqC Competition Submission : <a href="./docs/AIMer-document-KpqC.pdf">(pdf)</a>
 
-  <li> KpqC Winter Camp Slides(2023. 02. 24) : <a href="./docs/AIMer_KpqC_Winter_Camp_slide_handout.pdf">(pdf)</a>
+  <li> KpqC Winter Camp Slides(2023.02.24) : <a href="./docs/AIMer_KpqC_Winter_Camp_slide_handout.pdf">(pdf)</a>
 
 </ul>	
 

@@ -38,3 +38,20 @@ td.center {
 p {
 	line-height: 1.3em;
 }
+
+.nth-table-number tr:nth-child(1){
+    background: #AAAAAA;
+}
+
+.nth-table-number tr:nth-child(6){
+    background: #DDDDDD;
+}
+.nth-table-number tr:nth-child(7){
+    background: #DDDDDD;
+}
+.nth-table-number tr:nth-child(8){
+    background: #DDDDDD;
+}
+.nth-table-number tr:nth-child(9){
+    background: #DDDDDD;
+}
