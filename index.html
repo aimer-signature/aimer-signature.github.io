@@ -20,7 +20,7 @@
 <p>AIMer is a signature scheme which is obtained from a zero-knowledge proof of preimage knowledge for a certain one-way function. AIMer consists of two parts: a non-interactive zero-knowledge proof of knowledge(NIZKPoK) system, and a one-way function. The security of both parts solely depends on the security of the
 underlying symmetric primitives.</p>
 
-<p>The NIZKPoK system in AIMer can be viewed as a customized version of the BN++ proof system. BN++ is a NIZKPoK system based on the MPC-in-the-Head (MPCitH) paradigm, which efficiently proves large-field arithmetic. The difference between our system and BN++ is as follows.</p>
+<p>The NIZKPoK system in AIMer can be viewed as a customized version of the <a href = "https://eprint.iacr.org/2022/588">BN++ proof system</a>. BN++ is a NIZKPoK system based on the MPC-in-the-Head (MPCitH) paradigm, which efficiently proves large-field arithmetic. The difference between our system and BN++ is as follows.</p>
 
 <ul>
   <li> Our system integrates Commit and ExpandTape to CommitAndExpand. It reduces significant amount of signing and verification time without loss of security in the random oracle model.
@@ -35,13 +35,13 @@ underlying symmetric primitives.</p>
 
 	<li> Among the signature schemes whose security depends only on symmetric primitives, AIMer enjoys the smallest signature size.
 
-	<li> AIMer enjoys the small secret and public key size; the small key size makes it easier to apply to many PKI applications based on multi-chain certificates or frequent certificate transmission.
+	<li> AIMer enjoys small secret and public key size; the small key size makes it easier to apply to many PKI applications based on multi-chain certificates or frequent certificate transmission.
 
   <li> Key generation is simple and fast.
 
   <li> AIMer provides a granular trade-off between the execution time and the signature size. This feature makes it possible to adjust the performance based on the user’s requirements.
 
-  <li> AIMer is resistant to the reuse of the public randomnesses such as iv and salt. To the best of our knowledge, multiple uses of an identical value of iv or salt linearly increase the probability of a pkcollision or a multi-target hash collision, respectively.
+  <li> AIMer is resistant to the reuse of the public randomnesses such as iv and salt. To the best of our knowledge, multiple uses of an identical value of iv or salt linearly increase the probability of a pk collision or a multi-target hash collision, respectively.
 </ul>
 
 <h2>Performance</h2>
@@ -92,7 +92,7 @@ underlying symmetric primitives.</p>
   <td class="center">166,436,892</td>
   <td class="center">32</td>
   <td class="center">16</td>
-  <td class="center">3840</td>
+  <td class="center">3,840</td>
 </tr>
 <tr>
   <td>AIMER_L3_PARAM1</td>
