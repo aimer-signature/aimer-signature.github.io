@@ -8,7 +8,7 @@ html {
 
 body {
 	width: auto;
-	max-width: 60em;
+	max-width: 6000em;
 	margin: auto;
 }
 
@@ -57,7 +57,7 @@ p {
 }
 
  footer {
-        height: 10em;
+        height: 2em;
         text-align: right;
         font-size: small;
         margin: 1em;
