@@ -8,7 +8,7 @@ html {
 
 body {
 	width: auto;
-	max-width: 50em;
+	max-width: 60em;
 	margin: auto;
 }
 
@@ -54,4 +54,10 @@ p {
 }
 .nth-table-number tr:nth-child(9){
     background: #DDDDDD;
+}
+
+ footer {
+        height: 30px;
+        text-align: right;
+        font-size: small;
 }
