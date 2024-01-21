@@ -2,63 +2,61 @@
 <html>
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3SXG7PKRVR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3SXG7PKRVR');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SXG7PKRVR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3SXG7PKRVR');
+  </script>
   
-<meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-<title>AIMer Signature</title>
-
-<link rel="stylesheet" href="style.css" type="text/css" />
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AIMer Signature</title>
+  <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
-
 <body>
+<div class="content">
+  <h1>AIMer Signature</h1>
 
-<div style="text-align: center;"><img src="img/banner.jpg" alt="AIMer" width="100%"/></div>
-
-<div style="margin: 0.5em">
-
-<h2>About AIMer</h2>
-
-<p>AIMer is a signature scheme which is obtained from a zero-knowledge proof of preimage knowledge for a certain one-way function. AIMer consists of two parts: a customized version of the <a href = "https://eprint.iacr.org/2022/588">BN++ proof system</a>, 
-  and the <a href="https://eprint.iacr.org/2022/1387">AIM one-way function</a>. The security of both parts solely depends on the security of the underlying symmetric primitives.</p>
-
-<h2>Recent News</h2>
-  <ul>
-    <li>
-      <b>Dec. 2023.</b> AIMer proceeds to the second round of the KpqC Competition.
-    </li>
-    <li>
-      <b>Dec. 2023.</b> The paper "AIM: Symmetric Primitive for Shorter Signatures with Stronger Security" is presented at ACM CCS 2023.
-    </li>
-    <li>
-      <b>Sep. 2023.</b> Mitigation to recent analyses on AIM is uploaded to the ePrint Archive.
-    </li>
-  </ul>
+  <section class="about">
+    <h2>About AIMer</h2>
+    <p>AIMer is a signature scheme which is obtained from a zero-knowledge proof of preimage knowledge for a certain one-way function. AIMer consists of two parts: a customized version of the <a href = "https://eprint.iacr.org/2022/588">BN++ proof system</a>, 
+    and the <a href="https://eprint.iacr.org/2022/1387">AIM one-way function</a>. The security of both parts solely depends on the security of the underlying symmetric primitives.</p>
+  </section>
   
-<h2>Advantages</h2>
-<ul>
-  <li> The security of AIMer depends only on the security of the underlying symmetric primitives.
-  <li> Among the signature schemes whose security depends only on symmetric primitives, AIMer enjoys the smallest signature size.
-  <li> AIMer enjoys small secret and public key size.
-  <li> Key generation is simple and fast.
-  <li> AIMer provides a granular trade-off between the execution time and the signature size.
-  <li> AIMer is resistant to the reuse of the public randomnesses such as iv and salt.
-</ul>
+  <section class="news">
+    <h2>Recent News</h2>
+    <ul>
+      <li>
+        <b>Dec. 2023.</b> AIMer proceeds to the second round of the KpqC Competition.
+      </li>
+      <li>
+        <b>Dec. 2023.</b> The paper "AIM: Symmetric Primitive for Shorter Signatures with Stronger Security" is presented at ACM CCS 2023.
+      </li>
+      <li>
+        <b>Sep. 2023.</b> Mitigation to recent analyses on AIM is uploaded to the ePrint Archive.
+      </li>
+    </ul>
+  </section>
 
-<h2>Performance</h2>
+  <section class="advantages">
+    <h2>Advantages</h2>
+    <ul>
+      <li> The security of AIMer depends only on the security of the underlying symmetric primitives.
+      <li> Among the signature schemes whose security depends only on symmetric primitives, AIMer enjoys the smallest signature size.
+      <li> AIMer enjoys small secret and public key size.
+      <li> Key generation is simple and fast.
+      <li> AIMer provides a granular trade-off between the execution time and the signature size.
+      <li> AIMer is resistant to the reuse of the public randomnesses such as iv and salt.
+    </ul>
+  </section>
 
-<p> Environment: Intel Xeon E5-1650 v3 @ 3.50 GHz with 128 GB RAM, TurboBoost and Hyper-threading disabled, gcc 7.5.0 with -O3 option. </p>
-
+  <section class="performance">
+    <h2>Performance</h2>
+    <p> Environment: Intel Xeon E5-1650 v3 @ 3.50 GHz with 128 GB RAM, TurboBoost and Hyper-threading disabled, gcc 7.5.0 with -O3 option. </p>
 <table class="nth-table-number">
 <tr class="titlerow">
   <th>Scheme</th>
@@ -153,9 +151,10 @@
 </tr>
 
 </table>
+  </section>
 
-<h2>Publications</h2>
-
+  <section class="publications">
+    <h2>Publications</h2>
 <ul>
   <li> Seongkwang Kim, Jincheol Ha, Mincheol Son, Byeonghak Lee. <br>
     <a href="https://eprint.iacr.org/2023/1474">"Mitigation on the AIM Cryptanalysis"</a>. <br>
@@ -164,11 +163,12 @@
   <li> KpqC Competition Submission (v0.9): <a href="./docs/AIMer-KpqC-Document.pdf">(pdf)</a>
   <li> Seongkwang Kim, Jincheol Ha, Mincheol Son, Byeonghak Lee, Dukjae Moon, Joohee Lee, Sangyub Lee, Jihoon Kwon, Jihoon Cho, Hyojin Yoon and Jooyoung Lee. <br>
    <a href="https://eprint.iacr.org/2022/1387">"AIM: Symmetric Primitive for Shorter Signatures with Stronger Security"</a>. <br>
-  Cryptology ePrint Archive. Report 2022/1387. 2022. To appear in ACM CCS 2023.
+   ACM CCS 2023.
 </ul>
+  </section>
 
-<h2>Resources</h2>
-
+  <section class="resources">
+    <h2>Resources</h2>
 <ul>
   <li> ACM CCS 2023 Slides (2023. Nov. 27):  <a href="./docs/[CCS 2023] AIM Symmetric Primitive for Shorter Signatures with Stronger Security (final).pdf">(pdf)</a> 
   <li> KpqC 7th Workshop Slides (2023. Nov. 14):  <a href="./docs/[KpqC 7th Workshop] Mitigation on AIM Cryptanalysis.pdf">(pdf)</a> 
@@ -180,10 +180,11 @@
   <li> Submission to <a href="https://www.kpqc.or.kr/competition.html">KpqC Competition Round 1</a> (v0.9): <a href="./docs/AIMer-KpqC-submission.zip">(zip)</a>
   <li> KpqC Winter Camp Slides (2023. Feb. 24): <a href="./docs/AIMer_KpqC_Winter_Camp_slide_handout.pdf">(pdf)</a>
 </ul> 
+  </section>
 
-<h2>Third-party Analysis</h2>
-
-<ul>
+  <section class="analysis">
+    <h2>Third-party Analysis</h2>
+    <ul>
   <li>
     Jolijn Cottaar, Kathrin Hövelmanns, Andreas Hülsing, Tanja Lange, Mohammad Mahzoun, Alex Pellegrini, Alberto Ravagnani, Sven Schäge, Monika Trimoska, and Benne de Weger. <br>
     <a href="https://eprint.iacr.org/2023/1853">"Report on evaluation of KpqC candidates"</a>.<br>
@@ -219,15 +220,10 @@
     <a href="https://eprint.iacr.org/2023/337">"Quantum Implementation of AIM: Aiming for Low-Depth"</a>. <br>
     Cryptology ePrint Archive. Report 2023/337. 2023.
   </li>
-</ul> 
+    </ul>
+  </section>
 
-
-<footer class="footer"> last updated Dec 18, 2023
-</footer>
-
+  <footer> last updated Jan 22, 2024 </footer>
 </div>
-
 </body>
-
 </html>
-
