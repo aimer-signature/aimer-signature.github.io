@@ -100,11 +100,6 @@ footer {
   h1 {
     font-size: 2em;
   }
-
-  table {
-    display: block;
-    overflow-x: auto;
-  }
 }
 
 @media (max-width: 480px) {
