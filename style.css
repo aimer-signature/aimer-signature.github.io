@@ -120,3 +120,18 @@ footer {
     max-width: 1400px; /* Even larger max-width for very wide screens */
   }
 }
+
+.top-bar{
+  display:flex;               /* 한 줄 배치 */
+  justify-content:flex-end;   /* 오른쪽 정렬 */
+  align-items:center;
+  padding:0.5rem 1rem;        /* 여백 */
+  font-size:0.9rem;           /* 본문보다 살짝 작게 */
+}
+.top-bar .contact a{
+  text-decoration:none;
+  color:#0065ff;              /* 링크 색상(선호에 맞게 변경) */
+}
+.top-bar .contact a:hover{
+  text-decoration:underline;
+}
