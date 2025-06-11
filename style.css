@@ -126,7 +126,7 @@ footer {
   justify-content:flex-end;   /* 오른쪽 정렬 */
   align-items:center;
   padding:0.5rem 1rem;        /* 여백 */
-  font-size:0.9rem;           /* 본문보다 살짝 작게 */
+  font-size:1.2rem;           /* 본문보다 살짝 작게 */
 }
 .top-bar .contact a{
   text-decoration:none;
